@@ -15,18 +15,9 @@ public class CarDaoImp implements CarDao {
         carList.add(new Car("Gazel", "Russia", 30000));
     }
 
-    @Override
-    public List<Car> getSpecifiedNumberOfCars(int number) {
-        if (number >= 5) return carList;
-        List<Car> newListOfCars = new ArrayList<>();
-        for (int i = 0; i < number; i++) {
-            newListOfCars.add(carList.get(i));
-        }
-        return newListOfCars;
-    }
 
     @Override
-    public void addCar(Car car) {
-        carList.add(car);
+    public List<Car> getAllCars() {
+        return carList;
     }
 }
